@@ -1,0 +1,1 @@
+self.__RSC_CSS_MANIFEST={"__entry_css__":{"/Users/elamankurmanaliev/Documents/Development/porter/app/page":["/Users/elamankurmanaliev/Documents/Development/porter/styles/globals.css"]},"/Users/elamankurmanaliev/Documents/Development/porter/app/layout.js":["/Users/elamankurmanaliev/Documents/Development/porter/styles/globals.css"]}
