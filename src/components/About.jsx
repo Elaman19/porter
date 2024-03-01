@@ -39,19 +39,18 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Услуги</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Наверно один из самых популярных и узнаваемых иностранных автомобилей для перевозки грузов до 1 тонны является Hyundai Porter. 
+        К основным достоинствам данного автомобиля являются его габариты и грузоподъемность. 
+        Объем перевозимого груза на Hyundai Porter достигает 9 кубических метра, перевозимый вес — 1000 кг, 
+        что вполне можно использовать для доставки, допустим, бытовой техники, предметов мебели, разнообразного рода вещей.
+        Также, еще одним замечательным отличием от других автомобилей, является относительная дешевизна и минимальное время заказа. 
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

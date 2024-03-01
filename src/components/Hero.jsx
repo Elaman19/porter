@@ -20,7 +20,9 @@ const Hero = () => {
             Мы осуществляем грузовые транспортные перевозки по всему Кыргызстану <br className='sm:block hidden' />
             и городу Бишкек
           </p>
-          <img src={porter} alt='porter' className="rounded"/>
+          <div className="mt-40 sm:mt-0">
+            <img src={porter} alt='porter' className="rounded"/>
+          </div>
         </div>
         
       </div>

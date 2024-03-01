@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { menu, close } from "../assets";
+import React, { useEffect, useState } from "react"
+import { styles } from "../styles"
+import { wa, phone } from "../assets"
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [toggle, setToggle] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,64 +30,36 @@ const Navbar = () => {
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Позвонить &nbsp;
-            <span className='sm:block hidden'> | Whatsapp</span>
-          </p>
-        </Link>
+        
+        <p className='text-white text-[18px] font-bold cursor-pointer flex'>
+          <a href="tel:+996702115669">
+            <div className="flex items-center justify-center">
+              <div className="max-w-full max-h-full">
+                <img
+                  src={phone}
+                  alt='phone'
+                  className='w-[28px] h-[28px] object-contain'
+                  onClick={() => {}}
+                /> 
+              </div>
+              <div className="pl-[2px]">+996 702 115 669</div> 
+            </div>
+          </a>
+        </p>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
-
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className='flex flex-1 justify-end items-center'>
+          <a href="whatsapp://send?text=Добрый день! Хотел бы воспользоваться услугой портер такси.&phone=+996702115669">
+            <div className="flex items-center justify-start">
+                <div className="max-w-full max-h-full">
+                  <img
+                    src={wa}
+                    alt='wa'
+                    className='w-[28px] h-[28px] object-contain'
+                  />
+                </div>
+                <div className="pl-[5px]">WhatsApp</div> 
+              </div>
+          </a>
         </div>
       </div>
     </nav>

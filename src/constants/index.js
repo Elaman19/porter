@@ -5,28 +5,13 @@ import {
   web,
 } from "../assets";
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
-
 const services = [
   {
     title: "Наши водители отлично ориентируются на местности",
     icon: web,
   },
   {
-    title: "Экономьте время и деньги с нашей грузовой доставкой в Бишкек!",
+    title: "Экономьте время и деньги с нашей грузовой доставкой",
     icon: mobile,
   },
   {
