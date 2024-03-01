@@ -37,7 +37,7 @@ const Contact = () => {
             <span className='text-white font-medium mb-4'>Позвонить</span>
             <a 
               href="tel:+996702115669"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium hover:bg-violet-600'
             >
                 +996 702 115 669
             </a>
@@ -46,10 +46,9 @@ const Contact = () => {
             <span className='text-white font-medium mb-4'>Написать</span>
             <a 
               href="whatsapp://send?text=Добрый день! Хотел бы воспользоваться услугой портер такси.&phone=+996702115669"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'  
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium hover:bg-violet-600'  
             >
-              
-              <div className="flex items-center justify-start">
+              <div className="flex items-center justify-star">
                 <div className="max-w-full max-h-full">
                   <img
                     src={wa}

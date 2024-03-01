@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         
-        <p className='text-white text-[18px] font-bold cursor-pointer flex'>
+        <p className='text-white text-[18px] font-bold cursor-pointer flex hover:bg-violet-900'>
           <a href="tel:+996702115669">
             <div className="flex items-center justify-center">
               <div className="max-w-full max-h-full">
@@ -47,9 +47,9 @@ const Navbar = () => {
           </a>
         </p>
 
-        <div className='flex flex-1 justify-end items-center'>
+        <div className='flex flex-1 justify-end items-center '>
           <a href="whatsapp://send?text=Добрый день! Хотел бы воспользоваться услугой портер такси.&phone=+996702115669">
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-start hover:bg-violet-900">
                 <div className="max-w-full max-h-full">
                   <img
                     src={wa}
