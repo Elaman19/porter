@@ -3,12 +3,12 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import porter from './porter2.png'
+import porter from './cars.png'
 import wa from './wa.svg'
+import tg from './tg.svg'
 import phone from './phone.svg'
 
 export {
@@ -17,10 +17,10 @@ export {
   creator,
   mobile,
   web,
-  github,
   menu,
   close,
   porter,
   wa,
+  tg,
   phone
 };
