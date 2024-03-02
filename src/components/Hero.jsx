@@ -14,7 +14,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-           <span className='text-[#915EFF]'>Грузоперевозки</span> по Бишкеку и Кыргызстану
+           <span className='text-[#915EFF]'>Грузоперевозки</span> по Бишкеку и Кыргызстану <span className='text-[#915EFF]'>24/7</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Мы осуществляем грузовые транспортные перевозки по всему Кыргызстану <br className='sm:block hidden' />
