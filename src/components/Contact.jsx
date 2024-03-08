@@ -1,28 +1,14 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
-
 import { styles } from "../styles";
-import { slideIn } from "../utils/motion";
 import { tg, wa } from "../assets";
-import { SectionWrapper } from "../hoc";
 
 const Contact = () => {
-  const formRef = useRef()
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse `}
-    >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-      >
+    <div className={`xl:mt-12 sm:px-16 px-6 m-auto sm:w-[65%] w-[90%]`}>
+      <div className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
         <h3 className={styles.sectionHeadText}>Контакты</h3>
 
-        <form
-          ref={formRef}
-          className='mt-12 flex flex-col gap-8'
-        >
+        <form className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Позвонить</span>
             <a 
@@ -80,9 +66,9 @@ const Contact = () => {
           </label>
           
         </form>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact

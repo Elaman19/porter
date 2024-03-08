@@ -3,7 +3,6 @@ import { styles } from "../styles"
 import { wa, phone } from "../assets"
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {

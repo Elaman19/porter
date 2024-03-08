@@ -3,27 +3,29 @@ import {
   backend,
   creator,
   web,
+  porterFront,
+  sprinter
 } from "../assets";
 
 const services = [
   {
-    title: "Офисный переезд",
-    icon: web,
+    title: "Портер такси",
+    icon: porterFront,
   },
   {
-    title: "Квартирный переезд",
-    icon: mobile,
+    title: "Спринтер такси",
+    icon: sprinter,
   },
   {
     title: "Междугородний переезд",
     icon: backend,
   },
   {
-    title: "Портер такси",
+    title: "Офисный переезд",
     icon: creator,
   },
   {
-    title: "Спринтер такси",
+    title: "Квартирный переезд",
     icon: web,
   },
   {

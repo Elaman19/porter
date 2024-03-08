@@ -10,6 +10,8 @@ import porter from './cars.png'
 import wa from './wa.svg'
 import tg from './tg.svg'
 import phone from './phone.svg'
+import porterFront from './porter-front.jpg'
+import sprinter from './sprinter.jpeg'
 
 export {
   logo,
@@ -22,5 +24,7 @@ export {
   porter,
   wa,
   tg,
-  phone
+  phone,
+  porterFront,
+  sprinter
 };
