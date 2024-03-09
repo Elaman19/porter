@@ -12,6 +12,8 @@ import tg from './tg.svg'
 import phone from './phone.svg'
 import porterFront from './porter-front.jpg'
 import sprinter from './sprinter.jpeg'
+import gruzchiki from './gruzchiki.jpg'
+import pereezd from './pereezd.jpg'
 
 export {
   logo,
@@ -26,5 +28,7 @@ export {
   tg,
   phone,
   porterFront,
-  sprinter
+  sprinter,
+  gruzchiki,
+  pereezd,
 };

@@ -4,7 +4,9 @@ import {
   creator,
   web,
   porterFront,
-  sprinter
+  sprinter,
+  gruzchiki,
+  pereezd
 } from "../assets";
 
 const services = [
@@ -17,19 +19,19 @@ const services = [
     icon: sprinter,
   },
   {
-    title: "Междугородний переезд",
-    icon: backend,
+    title: "Услуги грузчиков",
+    icon: gruzchiki,
   },
   {
-    title: "Офисный переезд",
-    icon: creator,
+    title: "Офисный и квартирный переезд",
+    icon: pereezd,
   },
   {
     title: "Квартирный переезд",
     icon: web,
   },
   {
-    title: "Услуги грузчиков",
+    title: "Междугородний переезд",
     icon: mobile,
   },
   {

@@ -41,7 +41,7 @@ const Navbar = () => {
                   onClick={() => {}}
                 /> 
               </div>
-              <div className="pl-[2px]">+996 702 115 669</div> 
+              <div>+996 702 115 669</div> 
             </div>
           </a>
         </p>

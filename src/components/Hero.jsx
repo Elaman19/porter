@@ -14,10 +14,7 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
            <span className='text-[#915EFF]'>Грузоперевозки</span> по Бишкеку и Кыргызстану <span className='text-[#915EFF]'>24/7</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Мы осуществляем грузовые транспортные перевозки по всему Кыргызстану <br className='sm:block hidden' />
-            и городу Бишкек
-          </p>
+          
           <div className="mt-40 sm:mt-0">
             <img src={porter} alt='porter' className="rounded"/>
           </div>
