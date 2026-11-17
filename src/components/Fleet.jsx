@@ -1,10 +1,10 @@
 import { useLang } from "../i18n";
 import { waHref } from "../config/site";
-import { porterFront, sprinter } from "../assets";
+import { porter, sprinter } from "../assets";
 import useReveal from "../hooks/useReveal";
 import { ChatIcon } from "./Icons";
 
-const PHOTOS = { porter: porterFront, sprinter };
+const PHOTOS = { porter, sprinter };
 
 const Fleet = () => {
   const { t } = useLang();
@@ -23,8 +23,15 @@ const Fleet = () => {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {f.items.map((car) => (
             <article key={car.key} className="overflow-hidden rounded-3xl bg-white text-ink">
-              <div className="aspect-[4/3] max-h-[340px] w-full overflow-hidden bg-line">
-                <img src={PHOTOS[car.key]} alt={car.alt} loading="lazy" className="h-full w-full object-cover" />
+              <div className="aspect-[3/2] w-full overflow-hidden bg-line">
+                <img
+                  src={PHOTOS[car.key]}
+                  alt={car.alt}
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="p-6 sm:p-7">
                 <h3 className="text-[22px] font-extrabold">{car.name}</h3>

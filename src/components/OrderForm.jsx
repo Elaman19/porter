@@ -51,24 +51,36 @@ const OrderForm = () => {
             {f.when}
             <input className={fieldClass} value={data.when} onChange={set("when")} placeholder={f.whenPh} autoComplete="off" />
           </label>
-          <label className="block text-[14px] font-bold sm:col-span-2 lg:col-span-1">
+          <label className="block text-[14px] font-bold sm:col-span-2">
             {f.cargo}
             <input className={fieldClass} value={data.cargo} onChange={set("cargo")} placeholder={f.cargoPh} autoComplete="off" />
           </label>
-          <label className="block text-[14px] font-bold">
-            {f.car}
-            <select className={fieldClass} value={data.car} onChange={(e) => setData((d) => ({ ...d, car: Number(e.target.value) }))}>
-              {f.cars.map((c, i) => (
-                <option key={c} value={i}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </label>
+
           <label className="flex min-h-[48px] cursor-pointer items-center gap-3 self-end rounded-xl border border-line bg-white px-4 text-[15px] font-bold">
             <input type="checkbox" checked={data.movers} onChange={set("movers")} className="h-5 w-5 accent-[#FFC400]" />
             {f.movers}
           </label>
+
+          <fieldset className="sm:col-span-2 lg:col-span-3">
+            <legend className="text-[14px] font-bold">{f.car}</legend>
+            <div className="mt-1.5 grid gap-2 sm:grid-cols-3">
+              {f.cars.map((c, i) => (
+                <label key={c} className="cursor-pointer">
+                  <input
+                    type="radio"
+                    name="car"
+                    value={i}
+                    checked={data.car === i}
+                    onChange={() => setData((d) => ({ ...d, car: i }))}
+                    className="peer sr-only"
+                  />
+                  <span className="flex min-h-[48px] items-center justify-center rounded-xl border border-line bg-white px-4 text-center text-[15px] font-bold transition hover:border-ink peer-checked:border-brand peer-checked:bg-brand peer-focus-visible:outline peer-focus-visible:outline-[3px] peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ink">
+                    {c}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
 
           <div className="flex flex-col items-start gap-3 sm:col-span-2 sm:flex-row sm:items-center lg:col-span-3">
             <button type="submit" className="btn-wa w-full sm:w-auto">

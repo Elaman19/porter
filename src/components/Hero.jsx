@@ -1,6 +1,6 @@
 import { useLang } from "../i18n";
 import { SITE, telHref, waHref } from "../config/site";
-import { cars } from "../assets";
+import { sprinter } from "../assets";
 import { PhoneIcon, ChatIcon, CheckIcon } from "./Icons";
 
 const Hero = () => {
@@ -68,14 +68,14 @@ const Hero = () => {
 
         <div className="relative mx-auto w-full max-w-[520px]">
           <div aria-hidden="true" className="absolute -inset-3 rotate-2 rounded-[28px] bg-brand" />
-          <div className="relative overflow-hidden rounded-3xl border border-line bg-white p-5 shadow-lift sm:p-7">
+          <div className="relative overflow-hidden rounded-3xl border-4 border-white shadow-lift">
             <img
-              src={cars}
+              src={sprinter}
               alt={h.imgAlt}
-              width="718"
-              height="347"
+              width="1200"
+              height="800"
               fetchpriority="high"
-              className="h-auto w-full"
+              className="aspect-[4/3] h-auto w-full object-cover"
             />
           </div>
         </div>
