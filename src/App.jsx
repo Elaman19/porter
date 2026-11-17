@@ -1,19 +1,34 @@
-import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Hero, Navbar } from "./components";
+import { LanguageProvider } from "./i18n";
+import {
+  Header,
+  Hero,
+  OrderForm,
+  Services,
+  Fleet,
+  Advantages,
+  Steps,
+  Faq,
+  Contact,
+  Footer,
+  MobileBar,
+} from "./components";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Contact />
-      </div>
-    </BrowserRouter>
-  )
-}
+const App = () => (
+  <LanguageProvider>
+    <Header />
+    <main>
+      <Hero />
+      <OrderForm />
+      <Services />
+      <Fleet />
+      <Advantages />
+      <Steps />
+      <Faq />
+      <Contact />
+    </main>
+    <Footer />
+    <MobileBar />
+  </LanguageProvider>
+);
 
 export default App;

@@ -1,25 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
-  mode: "jit",
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Manrope Variable"', "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+      },
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        ink: "#14161A",
+        muted: "#5B6068",
+        paper: "#FAFAF7",
+        line: "#E8E6DF",
+        brand: {
+          DEFAULT: "#FFC400",
+          dark: "#E6AE00",
+          soft: "#FFF4CC",
+        },
+        wa: "#1FAF55",
+        tg: "#229ED9",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        card: "0 1px 2px rgba(20,22,26,.04), 0 8px 24px -8px rgba(20,22,26,.10)",
+        lift: "0 2px 4px rgba(20,22,26,.05), 0 18px 40px -12px rgba(20,22,26,.18)",
+        cta: "0 8px 20px -6px rgba(255,196,0,.55)",
       },
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+      maxWidth: {
+        site: "72rem",
       },
     },
   },

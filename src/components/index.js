@@ -1,11 +1,11 @@
-import Hero from "./Hero";
-import Navbar from "./Navbar";
-import About from "./About";
-import Contact from "./Contact";
-
-export {
-  Hero,
-  Navbar,
-  About,
-  Contact
-};
+export { default as Header } from "./Header";
+export { default as Hero } from "./Hero";
+export { default as OrderForm } from "./OrderForm";
+export { default as Services } from "./Services";
+export { default as Fleet } from "./Fleet";
+export { default as Advantages } from "./Advantages";
+export { default as Steps } from "./Steps";
+export { default as Faq } from "./Faq";
+export { default as Contact } from "./Contact";
+export { default as Footer } from "./Footer";
+export { default as MobileBar } from "./MobileBar";

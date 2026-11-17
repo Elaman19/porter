@@ -1,94 +1,61 @@
-import { styles } from "../styles";
-import { phone, tg, wa } from "../assets";
+import { useLang } from "../i18n";
+import { SITE, telHref, waHref } from "../config/site";
+import { wa, tg } from "../assets";
+import useReveal from "../hooks/useReveal";
+import { PhoneIcon } from "./Icons";
+
+const rowClass =
+  "flex min-h-[64px] items-center gap-4 rounded-2xl bg-white/[0.07] px-5 py-3 text-white ring-1 ring-white/10 transition hover:bg-white/[0.14]";
 
 const Contact = () => {
+  const { t } = useLang();
+  const c = t.contacts;
+  const ref = useReveal();
 
   return (
-    <div className={`xl:mt-12 sm:px-16 px-6 m-auto sm:w-[40%] w-[90%]`}>
-      <div className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
-        <h3 className={styles.sectionHeadText}>Контакты</h3>
+    <section id="contacts" className="container-site pb-16 sm:pb-24">
+      <div ref={ref} className="reveal overflow-hidden rounded-[32px] bg-ink px-6 py-12 text-white sm:px-12 sm:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div>
+            <span className="eyebrow">{c.eyebrow}</span>
+            <h2 className="section-title">{c.title}</h2>
+            <p className="mt-3 max-w-md text-[17px] leading-relaxed text-white/70">{c.lead}</p>
+            <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-[14px] font-extrabold text-ink">
+              {SITE.city} · {SITE.hours}
+            </p>
+          </div>
 
-        <form className='mt-12 flex flex-col gap-8'>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Позвонить</span>
-            <a 
-              href="tel:+996702115669"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium hover:bg-violet-600'
-            >
-                <div className="flex items-center justify-star">
-                  <div className="max-w-full max-h-full">
-                    <img
-                      src={phone}
-                      alt='phone1'
-                      className='w-[28px] h-[28px] object-contain'
-                      onClick={() => {}}
-                    /> 
-                  </div>
-                  <div className="pl-[2px]">+996 702 115 669</div> 
-                </div>
+          <div className="grid gap-3">
+            {SITE.phones.map((p) => (
+              <a key={p.raw} href={telHref(p)} className={rowClass}>
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-ink">
+                  <PhoneIcon size={22} />
+                </span>
+                <span>
+                  <span className="block text-[12px] font-semibold uppercase tracking-widest text-white/60">{c.call}</span>
+                  <span className="text-[20px] font-extrabold">{p.display}</span>
+                </span>
+              </a>
+            ))}
+            <a href={waHref(t.hero.waText)} target="_blank" rel="noopener noreferrer" className={rowClass}>
+              <img src={wa} alt="" width="44" height="44" className="h-11 w-11" />
+              <span>
+                <span className="block text-[12px] font-semibold uppercase tracking-widest text-white/60">{c.write}</span>
+                <span className="text-[20px] font-extrabold">{c.waLabel}</span>
+              </span>
             </a>
-            <br/>
-            <a 
-              href="tel:+996702115669"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium hover:bg-violet-600'
-            >
-                <div className="flex items-center justify-star">
-                  <div className="max-w-full max-h-full">
-                    <img
-                      src={phone}
-                      alt='phone1'
-                      className='w-[28px] h-[28px] object-contain'
-                      onClick={() => {}}
-                    /> 
-                  </div>
-                  <div className="pl-[2px]">+996 703 911 101</div> 
-                </div>
+            <a href={SITE.telegramUrl} target="_blank" rel="noopener noreferrer" className={rowClass}>
+              <img src={tg} alt="" width="44" height="44" className="h-11 w-11" />
+              <span>
+                <span className="block text-[12px] font-semibold uppercase tracking-widest text-white/60">{c.write}</span>
+                <span className="text-[20px] font-extrabold">{c.tgLabel}</span>
+              </span>
             </a>
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Написать</span>
-            <a 
-              href="whatsapp://send?text=Добрый день! Хотел бы воспользоваться услугой портер такси.&phone=+996702115669"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium hover:bg-violet-600'  
-            >
-              <div className="flex items-center justify-star">
-                <div className="max-w-full max-h-full">
-                  <img
-                    src={wa}
-                    alt='wa'
-                    className='w-[28px] h-[28px] object-contain'
-                    onClick={() => {}}
-                  /> 
-                </div>
-                <div className="pl-[5px]">WhatsApp</div> 
-              </div>
-            </a>
-
-            <br/>
-
-            <a 
-              href="https://t.me/+996702115669"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium hover:bg-violet-600' 
-              target="_blank" 
-            >
-              <div className="flex items-center justify-star">
-                <div className="max-w-full max-h-full">
-                  <img
-                    src={tg}
-                    alt='wa'
-                    className='w-[28px] h-[28px] object-contain'
-                    onClick={() => {}}
-                  /> 
-                </div>
-                <div className="pl-[5px]">Telegram</div> 
-              </div>
-            </a>
-          </label>
-          
-        </form>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Contact
+export default Contact;
